@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos con Flexbox</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #19635f;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        
+        .contenedor-articulos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        
+        article {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(29, 145, 106, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .articulo-imagen {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .articulo-contenido {
+            padding: 20px;
+        }
+        
+        .articulo-titulo {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #135f3f;
+        }
+        
+        .articulo-fecha {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .articulo-resumen {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .leer-mas {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #19635f;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .leer-mas:hover {
+            background-color: #50a2da;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .contenedor-articulos {
+                gap: 20px;
+            }
+            
+            article {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .articulo-titulo {
+                font-size: 1.3rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog de Tecnología</h1>
+        <p>Los últimos artículos sobre desarrollo web y diseño</p>
+    </header>
+    
+    <main class="contenedor-articulos">
+        <!-- Diseño Web Moderno con Flexbox -->
+        <article>
+            <img src="imagenes/Image 14 sept 2025, 10_28_21.png" alt="Diseño Flexbox" class="articulo-imagen">
+                <h2 class="articulo-titulo">Diseño Web Moderno con Flexbox</h2>
+                <span class="articulo-fecha">Publicado: 15 de Marzo, 2023</span>
+                <p class="articulo-resumen">Flexbox ha revolucionado la forma en que creamos diseños responsivos. Descubre cómo implementar layouts flexibles con esta poderosa herramienta de CSS.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </div>
+        </article>
+        
+        <!-- Enfoque Mobile First -->
+        <article>
+            <img src="imagenes/Image 14 sept 2025, 11_16_38.png" alt="Diseño Flexbox" class="articulo-imagen">
+            <div class="articulo-contenido">
+                <h2 class="articulo-titulo">Enfoque Mobile First</h2>
+                <span class="articulo-fecha">Publicado: 22 de Marzo, 2023</span>
+                <p class="articulo-resumen">Con el aumento del uso móvil, el diseño Mobile First se ha convertido en una necesidad. Aprende las mejores prácticas para implementarlo.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </div>
+        </article>
+        
+        <!-- CSS Grid vs Flexbox -->
+        <article>
+            <img src="imagenes/Image 14 sept 2025, 11_24_15.png" alt="Diseño Flexbox" class="articulo-imagen">
+            <div class="articulo-contenido">
+                <h2 class="articulo-titulo">CSS Grid vs Flexbox</h2>
+                <span class="articulo-fecha">Publicado: 5 de Abril, 2023</span>
+                <p class="articulo-resumen">¿Cuándo usar CSS Grid y cuándo Flexbox? Te explicamos las diferencias y casos de uso ideales para cada tecnología.</p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </div>
+        </article>
+    </main>
+    
+    <footer>
+        <p>© 2025 Blog de Tecnología - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
