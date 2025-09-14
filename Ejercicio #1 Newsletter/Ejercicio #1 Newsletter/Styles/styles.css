@@ -1,0 +1,89 @@
+:root{
+  --primary: #2f49d1;
+  --primary-hover: #263db3;
+  --muted: #64748b;
+  --text: #0f172a;
+  --shadow: 0 10px 25px rgba(15,23,42,.08);
+  --radius: 16px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family: Arial, sans-serif;
+  background:#fff;
+  color:var(--text);
+  line-height:1.6;
+}
+
+#newsletter{
+  padding: 60px 16px;
+  display:flex;justify-content:center;align-items:center;
+}
+
+.news-wrap{
+  text-align:center;
+  max-width:640px;
+}
+
+.news-icon{
+  width:40px;height:40px;
+  margin:0 auto 10px;
+  display:grid;place-items:center;
+  background:#e2e8f0;
+  border-radius:12px;
+  font-size:20px;
+}
+
+#newsletter h2{
+  font-size:32px;
+  font-weight:800;
+  margin:12px 0;
+}
+
+.news-sub{
+  color:var(--muted);
+  margin-bottom:24px;
+  font-size:16px;
+}
+
+.news-form{
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px;
+  display:flex;flex-direction:column;gap:12px;
+}
+
+.news-form input{
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  padding:14px 16px;
+  font:inherit;
+  outline:none;
+}
+
+.news-form input:focus{
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(47,73,209,.2);
+}
+
+.news-form button{
+  border:none;
+  border-radius:10px;
+  padding:14px 16px;
+  font-weight:700;
+  cursor:pointer;
+  background:var(--primary);
+  color:#fff;
+  transition:background .2s ease;
+}
+
+.news-form button:hover{
+  background:var(--primary-hover);
+}
+
+.news-foot{
+  margin-top:14px;
+  font-size:14px;
+  color:var(--muted);
+}
